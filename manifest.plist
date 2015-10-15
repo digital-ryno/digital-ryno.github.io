@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://digital-ryno.github.io/testSecureConnection.ipa</string>
+					<string>https://digital-ryno.github.io/playground.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -33,13 +33,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>clay.christopher.testSecureConnection</string>
+				<string>clay.christopher.playground</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>subtitle</key>
 				<string>for iOS</string>
 				<key>title</key>
-				<string>testSecureConnection</string>
+				<string>Playground</string>
 			</dict>
 		</dict>
 	</array>
