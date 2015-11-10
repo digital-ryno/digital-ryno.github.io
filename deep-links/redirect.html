@@ -17,7 +17,8 @@
             setTimeout(
                        function(){
                        if (+new Date - loadedAt < 2000){
-                       window.location = appstoreFail;
+alert("appStoreLink: " + appStoreLink)
+                       window.location = appStoreLink;
                        }
                        }
                        ,25);
@@ -25,7 +26,8 @@
                        window.open(appUrlScheme,"_self");
         } else {
             // Launch the website
-            window.location = weblink;
+alert("webLink: " + weblink)
+            window.location = webLink;
         }
     }
 </script>
