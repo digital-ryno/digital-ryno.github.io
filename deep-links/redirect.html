@@ -15,7 +15,7 @@
                        function(){
                        if (+new Date - loadedAt < 2000){
                        alert("appStoreLink: " + appStoreLink)
-                       window.location = appStoreLink;
+                       window.location.href = appStoreLink;
                        }
                        }
                        ,25);
@@ -23,7 +23,7 @@
                        window.open(appUrlScheme,"_self");
         } else {
             // Launch the website
-            window.location = webLink;
+            window.location.href = webLink;
         }
     }
 </script>
