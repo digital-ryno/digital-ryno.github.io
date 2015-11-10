@@ -1,0 +1,32 @@
+<html>
+<body>
+<p><a href="javascript:tryDeepLink()">Test Deep Link!</a></p>
+</body>
+<script>
+    function tryDeepLink() {
+        var weblink = "webSite.html"
+        var appStoreLink = "appStore.html";
+        var appUrlLink = "crc://page/1";
+        
+        //Check is device is iOS
+        var iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+        if (iOS)
+        {
+            //If the app is not installed the script will wait for 2sec and redirect to web.
+            var loadedAt = +new Date;
+            setTimeout(
+                       function(){
+                       if (+new Date - loadedAt < 2000){
+                       window.location = appstoreFail;
+                       }
+                       }
+                       ,25);
+                       //Try launching the app using URL schemes
+                       window.open(appUrlScheme,"_self");
+        } else {
+            // Launch the website
+            window.location = weblink;
+        }
+    }
+</script>
+</html>
