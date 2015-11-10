@@ -1,7 +1,4 @@
 <html>
-<body>
-<p><a href="javascript:tryDeepLink()">Test Deep Link!</a></p>
-</body>
 <script>
     function tryDeepLink() {
         var weblink = "webSite.html"
@@ -17,7 +14,7 @@
             setTimeout(
                        function(){
                        if (+new Date - loadedAt < 2000){
-alert("appStoreLink: " + appStoreLink)
+                       alert("appStoreLink: " + appStoreLink)
                        window.location = appStoreLink;
                        }
                        }
@@ -26,9 +23,12 @@ alert("appStoreLink: " + appStoreLink)
                        window.open(appUrlScheme,"_self");
         } else {
             // Launch the website
-alert("webLink: " + weblink)
+            alert("webLink: " + weblink)
             window.location = webLink;
         }
     }
 </script>
+<body>
+<p><a href="#" onclick="tryDeepLink(); return false;">Test Deep Link!</a></p>
+</body>
 </html>
