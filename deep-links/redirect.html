@@ -2,11 +2,11 @@
 <script>
     function tryDeepLink() {
         var weblink = "webLink.html"
-        var appStoreLink = "/appStore.html";
+        var appStoreLink = "appStore.html";
         var appUrlLink = "crc://page/1";
         
         //Check is device is iOS
-        var iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+        var iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false);
         if (iOS)
         {
             //If the app is not installed the script will wait for 2sec and redirect to web.
@@ -14,8 +14,7 @@
             setTimeout(
                        function(){
                        if (+new Date - loadedAt < 2000){
-                       alert("appStoreLink: " + appStoreLink)
-                       window.location.href = appStoreLink;
+                       window.open(appStoreLink, "_self");
                        }
                        }
                        ,25);
@@ -28,6 +27,6 @@
     }
 </script>
 <body>
-<p><a href="#" onclick="tryDeepLink(); return false;">Test Deep Link! (15)</a></p>
+<p><a href="#" onclick="tryDeepLink(); return false;">Test Deep Link! (16)</a></p>
 </body>
 </html>
