@@ -2,7 +2,7 @@
 <script>
     function tryDeepLink() {
         var weblink = "webLink.html"
-        var appStoreLink = "appStore.html";
+        var appStoreLink = "appStoreLink.html";
         var appUrlLink = "crc://page/1";
         
         //Check is device is iOS
@@ -14,12 +14,14 @@
             setTimeout(
                        function(){
                        if (+new Date - loadedAt < 2000){
+alert(appStoreLink);
                        window.open(appStoreLink, "_self");
                        }
                        }
                        ,25);
                        //Try launching the app using URL schemes
-                       window.open(appUrlScheme,"_self");
+alert(appUrlLink);
+                       window.open(appUrlLink, "_self");
         } else {
             // Launch the website
             window.open(weblink, "_self");
@@ -27,6 +29,6 @@
     }
 </script>
 <body>
-<p><a href="#" onclick="tryDeepLink(); return false;">Test Deep Link! (16)</a></p>
+<p><a href="#" onclick="tryDeepLink(); return false;">Test Deep Link! (17)</a></p>
 </body>
 </html>
