@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <!--
+         http://stackoverflow.com/questions/19701708/how-to-prevent-ios-safari-alert-when-trying-to-open-non-installed-native-app
+         -->
+        <script>
+            var nativeAppUrl = "crc://page/1";
+            var fallbackUrl = "webLink.html";
+
+            var iframe = document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "1px";
+            iframe.style.height = "1px";
+            iframe.onload = function () {
+                document.location = fallbackUrl;
+            };
+        
+            iframe.src = nativeAppUrl; //iOS app schema url
+        
+            window.onload = function(){
+                document.body.appendChild(iframe);
+            }
+        
+            setTimeout(function(){
+                window.location = fallbackUrl; //fallback url
+            }, 300);
+        </script>
+    </head>
+    <body>
+        <p>Version 1</p>
+        
+        <!-- button to Download App for new app users -->
+        <form action="appStoreLink.html" target="_blank">
+            <input type="submit" value="Download" />
+        </form>
+        
+        <!-- button to Open App to specific screen for existing app users -->
+        <form action="crc://page/1" target="_blank">
+            <input type="submit" value="Open App" />
+        </form>
+        
+    </body>
+</html>
